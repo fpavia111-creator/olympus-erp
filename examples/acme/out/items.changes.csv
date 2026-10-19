@@ -1,2 +1,2 @@
-source_line,field,source_column,original,output,reason,row_status
+﻿source_line,field,source_column,original,output,reason,row_status
 2,Base Price,Sales Price,$100.50,100.50,number normalized (symbols/commas/parentheses),rejected

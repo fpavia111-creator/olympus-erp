@@ -1,4 +1,4 @@
-source_line,issue_codes,issue_details,source:Item Number,source:Name,source:Sales Price
+﻿source_line,issue_codes,issue_details,source:Item Number,source:Name,source:Sales Price
 2,duplicate_id,External ID: Same identifier as line 4,BRK-100,Bracket,$100.50
 3,invalid,Base Price: Not a valid number,SRV-22,Service,N/A
 4,duplicate_id,External ID: Same identifier as line 2,BRK-100,Duplicate bracket,99
