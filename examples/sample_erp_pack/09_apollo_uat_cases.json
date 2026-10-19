@@ -1,0 +1,110 @@
+[
+  {
+    "case_id": "UAT-01-1",
+    "workflow": "quote-to-cash",
+    "scenario": "happy path",
+    "expected": "Business owner confirms expected state transitions and ledger/data effects",
+    "owner": "TO ASSIGN",
+    "status": "NOT RUN",
+    "evidence": "NOT PROVIDED"
+  },
+  {
+    "case_id": "UAT-01-2",
+    "workflow": "quote-to-cash",
+    "scenario": "invalid/missing input",
+    "expected": "System rejects or correctly routes invalid data without silent corruption",
+    "owner": "TO ASSIGN",
+    "status": "NOT RUN",
+    "evidence": "NOT PROVIDED"
+  },
+  {
+    "case_id": "UAT-01-3",
+    "workflow": "quote-to-cash",
+    "scenario": "roles and exception handling",
+    "expected": "Authorized roles complete task; unauthorized access blocked; failures can be resolved",
+    "owner": "TO ASSIGN",
+    "status": "NOT RUN",
+    "evidence": "NOT PROVIDED"
+  },
+  {
+    "case_id": "UAT-02-1",
+    "workflow": "purchase-to-pay",
+    "scenario": "happy path",
+    "expected": "Business owner confirms expected state transitions and ledger/data effects",
+    "owner": "TO ASSIGN",
+    "status": "NOT RUN",
+    "evidence": "NOT PROVIDED"
+  },
+  {
+    "case_id": "UAT-02-2",
+    "workflow": "purchase-to-pay",
+    "scenario": "invalid/missing input",
+    "expected": "System rejects or correctly routes invalid data without silent corruption",
+    "owner": "TO ASSIGN",
+    "status": "NOT RUN",
+    "evidence": "NOT PROVIDED"
+  },
+  {
+    "case_id": "UAT-02-3",
+    "workflow": "purchase-to-pay",
+    "scenario": "roles and exception handling",
+    "expected": "Authorized roles complete task; unauthorized access blocked; failures can be resolved",
+    "owner": "TO ASSIGN",
+    "status": "NOT RUN",
+    "evidence": "NOT PROVIDED"
+  },
+  {
+    "case_id": "UAT-03-1",
+    "workflow": "month-end close",
+    "scenario": "happy path",
+    "expected": "Business owner confirms expected state transitions and ledger/data effects",
+    "owner": "TO ASSIGN",
+    "status": "NOT RUN",
+    "evidence": "NOT PROVIDED"
+  },
+  {
+    "case_id": "UAT-03-2",
+    "workflow": "month-end close",
+    "scenario": "invalid/missing input",
+    "expected": "System rejects or correctly routes invalid data without silent corruption",
+    "owner": "TO ASSIGN",
+    "status": "NOT RUN",
+    "evidence": "NOT PROVIDED"
+  },
+  {
+    "case_id": "UAT-03-3",
+    "workflow": "month-end close",
+    "scenario": "roles and exception handling",
+    "expected": "Authorized roles complete task; unauthorized access blocked; failures can be resolved",
+    "owner": "TO ASSIGN",
+    "status": "NOT RUN",
+    "evidence": "NOT PROVIDED"
+  },
+  {
+    "case_id": "UAT-04-1",
+    "workflow": "inventory receiving",
+    "scenario": "happy path",
+    "expected": "Business owner confirms expected state transitions and ledger/data effects",
+    "owner": "TO ASSIGN",
+    "status": "NOT RUN",
+    "evidence": "NOT PROVIDED"
+  },
+  {
+    "case_id": "UAT-04-2",
+    "workflow": "inventory receiving",
+    "scenario": "invalid/missing input",
+    "expected": "System rejects or correctly routes invalid data without silent corruption",
+    "owner": "TO ASSIGN",
+    "status": "NOT RUN",
+    "evidence": "NOT PROVIDED"
+  },
+  {
+    "case_id": "UAT-04-3",
+    "workflow": "inventory receiving",
+    "scenario": "roles and exception handling",
+    "expected": "Authorized roles complete task; unauthorized access blocked; failures can be resolved",
+    "owner": "TO ASSIGN",
+    "status": "NOT RUN",
+    "evidence": "NOT PROVIDED"
+  }
+]

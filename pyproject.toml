@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "olympus-erp"
+version = "0.4.0"
+description = "Olympus ERP: find import-breaking data problems, reconcile trial loads and build the evidence pack your ERP project needs, locally"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Kurt Francisco"}]
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["erp", "data-migration", "netsuite", "reconciliation", "uat", "mcp"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial :: Accounting",
+]
+dependencies = []
+
+[project.optional-dependencies]
+pdf = ["reportlab>=4.0"]
+mcp = ["mcp>=2,<3"]
+all = ["reportlab>=4.0", "mcp>=2,<3"]
+
+[project.scripts]
+# Primary entry point. `hermes` is deliberately NOT installed as a command because
+# the popular `hermes-agent` package installs a `hermes` CLI; use `olympus hermes`.
+olympus = "olympus_erp.main:main"
+themis = "olympus_erp.signoff:main"
+peitho = "olympus_erp.peitho:main"
+olympus-web = "olympus_erp.dashboard:main"
+olympus-workbench = "olympus_erp.workbench:main"
+olympus-mcp-sdk = "olympus_erp.sdk_server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
