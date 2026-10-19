@@ -1,0 +1,2 @@
+source_line,issue_codes,issue_details,source:Bill Number,source:Vendor ID,source:Bill Date,source:Open Balance
+3,broken_reference,Vendor: Parent identifier absent,B-2,V9999,2026-09-19,100

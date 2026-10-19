@@ -1,0 +1,17 @@
+source_line,field,source_column,original,output,reason,row_status
+2,Email,Email,OPS@BRIGHTLINE.EXAMPLE.COM,ops@brightline.example.com,email lower-cased,clean
+2,State,State,Illinois,IL,state normalized to code,clean
+2,Country,Country,USA,US,country normalized to ISO code,clean
+2,Terms,Terms,N30,Net 30,spec value mapping,clean
+2,Credit Limit,Credit Limit,"$10,000.00",10000.00,number normalized (symbols/commas/parentheses),clean
+3,Country,Country,USA,US,country normalized to ISO code,rejected
+3,Terms,Terms,N30,Net 30,spec value mapping,rejected
+4,Country,Country,USA,US,country normalized to ISO code,rejected
+4,Terms,Terms,N15,Net 15,spec value mapping,rejected
+4,Credit Limit,Credit Limit,"(2,500.00)",-2500.00,number normalized (symbols/commas/parentheses),rejected
+5,Country,Country,USA,US,country normalized to ISO code,clean
+5,Terms,Terms,N30,Net 30,spec value mapping,clean
+6,State,State,Texas,TX,state normalized to code,clean
+6,Country,Country,USA,US,country normalized to ISO code,clean
+6,Terms,Terms,N30,Net 30,spec value mapping,clean
+6,Credit Limit,Credit Limit,"$1,000",1000,number normalized (symbols/commas/parentheses),clean
