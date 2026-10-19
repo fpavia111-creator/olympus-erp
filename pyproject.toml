@@ -25,6 +25,11 @@ classifiers = [
 ]
 dependencies = []
 
+[project.urls]
+Homepage = "https://github.com/fpavia111-creator/olympus-erp"
+Repository = "https://github.com/fpavia111-creator/olympus-erp"
+Issues = "https://github.com/fpavia111-creator/olympus-erp/issues"
+
 [project.optional-dependencies]
 pdf = ["reportlab>=4.0"]
 mcp = ["mcp>=2,<3"]
