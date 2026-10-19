@@ -1,0 +1,6 @@
+Customer ID,Customer Name,Email,State,Country,Terms,Credit Limit
+C1001,Brightline Fabrication LLC,OPS@BRIGHTLINE.EXAMPLE.COM,Illinois,USA,N30,"$10,000.00"
+C1002,Cascade Pumps,cascade@pumps,TX,USA,N30,500
+C1003,Omega Metal,contact@omegametal.example.com,Texs,USA,N15,"(2,500.00)"
+C1004,Brightline Fabrication,contact@brightline.example.com,IL,USA,N30,15000
+C1005,Valid Manufacturing,valid@example.com,Texas,USA,N30,"$1,000"

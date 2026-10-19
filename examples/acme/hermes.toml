@@ -1,0 +1,44 @@
+[project]
+name = "Acme demo: QuickBooks to NetSuite (synthetic data)"
+source_system = "quickbooks"
+day_first = "auto"
+rate_low = 150
+rate_high = 250
+
+[[load]]
+name = "customers"
+template = "netsuite.customer"
+source = "customers.csv"
+[load.values.Terms]
+N30 = "Net 30"
+N15 = "Net 15"
+
+[[load]]
+name = "items"
+template = "netsuite.item"
+source = "items.csv"
+
+[[load]]
+name = "vendors"
+template = "netsuite.vendor"
+source = "vendors.csv"
+
+[[load]]
+name = "invoices"
+template = "netsuite.open_invoice"
+source = "open_invoices.csv"
+
+[[load]]
+name = "ap_bills"
+template = "netsuite.open_ap_bill"
+source = "open_ap_bills.csv"
+
+[[load]]
+name = "inventory"
+template = "netsuite.inventory_on_hand"
+source = "inventory.csv"
+
+[[load]]
+name = "journals"
+template = "netsuite.journal"
+source = "opening_balances.csv"
