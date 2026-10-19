@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "olympus-erp": {
+      "command": "C:\\absolute\\path\\to\\Olympus\\.venv\\Scripts\\olympus.exe",
+      "args": ["mcp", "--workspace", "C:\\absolute\\path\\to\\Olympus"]
+    }
+  }
+}
