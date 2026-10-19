@@ -1,3 +1,3 @@
-source_line,issue_codes,issue_details,source:Journal,source:Account Number,source:Debit Amount,source:Credit Amount
+﻿source_line,issue_codes,issue_details,source:Journal,source:Account Number,source:Debit Amount,source:Credit Amount
 4,unbalanced,Journal ID: Journal OB-2 out of balance by 100,OB-2,1000,4000,0
 5,unbalanced,Journal ID: Journal OB-2 out of balance by 100,OB-2,3000,0,3900
