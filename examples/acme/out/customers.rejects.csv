@@ -1,3 +1,3 @@
-source_line,issue_codes,issue_details,source:Customer ID,source:Customer Name,source:Email,source:State,source:Country,source:Terms,source:Credit Limit
+﻿source_line,issue_codes,issue_details,source:Customer ID,source:Customer Name,source:Email,source:State,source:Country,source:Terms,source:Credit Limit
 3,invalid,Email: Invalid email address,C1002,Cascade Pumps,cascade@pumps,TX,USA,N30,500
 4,invalid,Credit Limit: Below minimum 0;State: Unknown US state; provide a mapping,C1003,Omega Metal,contact@omegametal.example.com,Texs,USA,N15,"(2,500.00)"
