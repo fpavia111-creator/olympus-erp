@@ -1,0 +1,32 @@
+{
+  "project": "Acme ERP Transformation Pilot",
+  "decision": "NO GO \u2014 NOT VERIFIED",
+  "required_evidence": [
+    {
+      "gate": "Requirements approved by accountable owner",
+      "status": "UNVERIFIED"
+    },
+    {
+      "gate": "Production mapping spec approved (Themis)",
+      "status": "UNVERIFIED"
+    },
+    {
+      "gate": "Trial import and reconciliation evidence",
+      "status": "UNVERIFIED"
+    },
+    {
+      "gate": "Critical UAT passes and defect review",
+      "status": "UNVERIFIED"
+    },
+    {
+      "gate": "Backup/rollback rehearsal completed",
+      "status": "UNVERIFIED"
+    },
+    {
+      "gate": "Human go-live authorization and staffed hypercare",
+      "status": "UNVERIFIED"
+    }
+  ],
+  "missing_discovery_fields": [],
+  "message": "This tool cannot grant release approval. Review independent signed evidence before a human authorizes production."
+}
