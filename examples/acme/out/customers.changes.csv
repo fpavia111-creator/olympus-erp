@@ -1,4 +1,4 @@
-source_line,field,source_column,original,output,reason,row_status
+﻿source_line,field,source_column,original,output,reason,row_status
 2,Email,Email,OPS@BRIGHTLINE.EXAMPLE.COM,ops@brightline.example.com,email lower-cased,clean
 2,State,State,Illinois,IL,state normalized to code,clean
 2,Country,Country,USA,US,country normalized to ISO code,clean
