@@ -1,0 +1,5 @@
+Journal,Account Number,Debit Amount,Credit Amount
+OB-1,1000,1500,0
+OB-1,3000,0,1500
+OB-2,1000,4000,0
+OB-2,3000,0,3900
