@@ -1,0 +1,280 @@
+{
+  "project": "Acme demo: QuickBooks to NetSuite (synthetic data)",
+  "status": "NOT READY",
+  "total_rows": 22,
+  "loadable_rows": 11,
+  "readiness_percent": 50.0,
+  "errors": 14,
+  "warnings": 1,
+  "estimated_hours": 15.68,
+  "estimated_cost_low": 2352.0,
+  "estimated_cost_high": 3920.0,
+  "spec_sha256": "9b90be7d3c21a16e86c601367469864fb9ab1ab7d7eca6a0bbe3f9a491ddc8d7",
+  "unchecked_dependencies": [],
+  "mapping_decisions": {
+    "file": "hermes.mappings.json",
+    "current": true,
+    "version": 1,
+    "sha256": "14e67f8280e396a4c22a5ec559c49585082b96f746c75b69559d9a2a73bf8a05",
+    "reviewer": "Demo reviewer (fictional sample)",
+    "decided_at": "2026-10-19T13:50:29.473427+00:00",
+    "reason": "All fields reviewed for the current spec and source files"
+  },
+  "loads": [
+    {
+      "name": "customers",
+      "template": "netsuite.customer",
+      "source": "customers.csv",
+      "rows": 5,
+      "loadable": 3,
+      "rejected": 2,
+      "warnings": 1,
+      "source_sha256": "80a90e635b4997d2516801d86a25ff883be9174d3f55242e36fb0b46f6b87d07",
+      "mapping": {
+        "External ID": "Customer ID",
+        "Company Name": "Customer Name",
+        "Email": "Email",
+        "State": "State",
+        "Country": "Country",
+        "Terms": "Terms",
+        "Credit Limit": "Credit Limit"
+      },
+      "transformations": 16,
+      "auto_mapped": {},
+      "notes": [],
+      "findings": [
+        {
+          "line": 3,
+          "column": "Email",
+          "severity": "error",
+          "code": "invalid",
+          "message": "Invalid email address"
+        },
+        {
+          "line": 4,
+          "column": "State",
+          "severity": "error",
+          "code": "invalid",
+          "message": "Unknown US state; provide a mapping"
+        },
+        {
+          "line": 4,
+          "column": "Credit Limit",
+          "severity": "error",
+          "code": "invalid",
+          "message": "Below minimum 0"
+        },
+        {
+          "line": 5,
+          "column": "Company Name",
+          "severity": "warning",
+          "code": "possible_duplicate",
+          "message": "Possible duplicate of line 2"
+        }
+      ]
+    },
+    {
+      "name": "items",
+      "template": "netsuite.item",
+      "source": "items.csv",
+      "rows": 4,
+      "loadable": 1,
+      "rejected": 3,
+      "warnings": 0,
+      "source_sha256": "91d4e616e93b65b26fd6582c98f62e1b20244725b65c0cc2b07a6a0341f0af7b",
+      "mapping": {
+        "External ID": "Item Number",
+        "Item Name": "Name",
+        "Base Price": "Sales Price"
+      },
+      "transformations": 1,
+      "auto_mapped": {},
+      "notes": [],
+      "findings": [
+        {
+          "line": 2,
+          "column": "External ID",
+          "severity": "error",
+          "code": "duplicate_id",
+          "message": "Same identifier as line 4"
+        },
+        {
+          "line": 3,
+          "column": "Base Price",
+          "severity": "error",
+          "code": "invalid",
+          "message": "Not a valid number"
+        },
+        {
+          "line": 4,
+          "column": "External ID",
+          "severity": "error",
+          "code": "duplicate_id",
+          "message": "Same identifier as line 2"
+        }
+      ]
+    },
+    {
+      "name": "vendors",
+      "template": "netsuite.vendor",
+      "source": "vendors.csv",
+      "rows": 1,
+      "loadable": 1,
+      "rejected": 0,
+      "warnings": 0,
+      "source_sha256": "68613dc5f519718266795744ac2870918ae08c18138008b57c34898b84946b5c",
+      "mapping": {
+        "External ID": "Vendor ID",
+        "Company Name": "Vendor Name",
+        "Email": "Email"
+      },
+      "transformations": 0,
+      "auto_mapped": {},
+      "notes": [],
+      "findings": []
+    },
+    {
+      "name": "invoices",
+      "template": "netsuite.open_invoice",
+      "source": "open_invoices.csv",
+      "rows": 4,
+      "loadable": 2,
+      "rejected": 2,
+      "warnings": 0,
+      "source_sha256": "ee11381cfad96f1e16c32c5b689e14f14ecee4b8f88079ce881923cccfcfbc03",
+      "mapping": {
+        "External ID": "Invoice Number",
+        "Customer": "Customer ID",
+        "Item": "Item ID",
+        "Date": "Invoice Date",
+        "Amount": "Open Balance"
+      },
+      "transformations": 0,
+      "auto_mapped": {},
+      "notes": [],
+      "findings": [
+        {
+          "line": 3,
+          "column": "Customer",
+          "severity": "error",
+          "code": "broken_reference",
+          "message": "Parent identifier absent"
+        },
+        {
+          "line": 4,
+          "column": "Date",
+          "severity": "error",
+          "code": "invalid",
+          "message": "Unrecognized date"
+        },
+        {
+          "line": 4,
+          "column": "Customer",
+          "severity": "error",
+          "code": "rejected_parent",
+          "message": "Referenced parent record is rejected"
+        },
+        {
+          "line": 4,
+          "column": "Item",
+          "severity": "error",
+          "code": "rejected_parent",
+          "message": "Referenced parent record is rejected"
+        }
+      ]
+    },
+    {
+      "name": "ap_bills",
+      "template": "netsuite.open_ap_bill",
+      "source": "open_ap_bills.csv",
+      "rows": 2,
+      "loadable": 1,
+      "rejected": 1,
+      "warnings": 0,
+      "source_sha256": "f15ae7fcd01aa682fc9791552c4ef4433df1467f540562ebd8e98d8a0e86b6f4",
+      "mapping": {
+        "External ID": "Bill Number",
+        "Vendor": "Vendor ID",
+        "Date": "Bill Date",
+        "Amount": "Open Balance"
+      },
+      "transformations": 0,
+      "auto_mapped": {},
+      "notes": [],
+      "findings": [
+        {
+          "line": 3,
+          "column": "Vendor",
+          "severity": "error",
+          "code": "broken_reference",
+          "message": "Parent identifier absent"
+        }
+      ]
+    },
+    {
+      "name": "inventory",
+      "template": "netsuite.inventory_on_hand",
+      "source": "inventory.csv",
+      "rows": 2,
+      "loadable": 1,
+      "rejected": 1,
+      "warnings": 0,
+      "source_sha256": "fd1923b94f565652113d2c8c97d03070a29d01ff3f3f65bd8a50e14696c54ba9",
+      "mapping": {
+        "External ID": "Inventory ID",
+        "Item": "SKU",
+        "Location": "Warehouse",
+        "Quantity": "Qty On Hand",
+        "Unit Cost": "Cost"
+      },
+      "transformations": 0,
+      "auto_mapped": {},
+      "notes": [],
+      "findings": [
+        {
+          "line": 3,
+          "column": "Item",
+          "severity": "error",
+          "code": "broken_reference",
+          "message": "Parent identifier absent"
+        }
+      ]
+    },
+    {
+      "name": "journals",
+      "template": "netsuite.journal",
+      "source": "opening_balances.csv",
+      "rows": 4,
+      "loadable": 2,
+      "rejected": 2,
+      "warnings": 0,
+      "source_sha256": "79484bc589504f7eb9c4e07c92c707caff79da00ceba690bf57785cf8b3835e5",
+      "mapping": {
+        "Journal ID": "Journal",
+        "Account": "Account Number",
+        "Debit": "Debit Amount",
+        "Credit": "Credit Amount"
+      },
+      "transformations": 0,
+      "auto_mapped": {},
+      "notes": [],
+      "findings": [
+        {
+          "line": 4,
+          "column": "Journal ID",
+          "severity": "error",
+          "code": "unbalanced",
+          "message": "Journal OB-2 out of balance by 100"
+        },
+        {
+          "line": 5,
+          "column": "Journal ID",
+          "severity": "error",
+          "code": "unbalanced",
+          "message": "Journal OB-2 out of balance by 100"
+        }
+      ]
+    }
+  ],
+  "caveat": "Planning estimate only, not a quote. Templates are illustrative; verify with target account sandbox."
+}
