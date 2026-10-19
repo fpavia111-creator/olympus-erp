@@ -1,2 +1,2 @@
-source_line,issue_codes,issue_details,source:Inventory ID,source:SKU,source:Warehouse,source:Qty On Hand,source:Cost
+﻿source_line,issue_codes,issue_details,source:Inventory ID,source:SKU,source:Warehouse,source:Qty On Hand,source:Cost
 3,broken_reference,Item: Parent identifier absent,INVST-2,UNKNOWN-ITEM,Austin,5,9.5
