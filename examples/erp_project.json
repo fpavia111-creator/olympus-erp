@@ -1,0 +1,17 @@
+{
+  "project_name": "Acme ERP Transformation Pilot",
+  "company_name": "Acme Fabrication (fictional sample)",
+  "industry": "manufacturing",
+  "source_systems": ["QuickBooks Desktop", "Salesforce", "inventory spreadsheets"],
+  "target_system": "NetSuite",
+  "users": 65,
+  "locations": 2,
+  "workflows": ["quote-to-cash", "purchase-to-pay", "month-end close", "inventory receiving"],
+  "pain_points": ["Duplicate customer records", "Slow month-end close", "Inventory and finance don't reconcile"],
+  "data_objects": ["customers", "vendors", "items", "open accounts receivable", "opening GL balances"],
+  "go_live_date": "2027-04-15",
+  "owners": {"Executive sponsor": "TO ASSIGN", "Finance owner": "TO ASSIGN", "Operations owner": "TO ASSIGN", "IT administrator": "TO ASSIGN", "Data owner": "TO ASSIGN", "Training lead": "TO ASSIGN"},
+  "controls": {"regulated_data": false, "multi_currency": false},
+  "integrations": [{"from":"Salesforce", "to":"NetSuite", "data":"Accounts and closed-won sales orders"}, {"from":"Shopify", "to":"NetSuite", "data":"Web orders and fulfillment states"}],
+  "financial": {"manual_hours_per_month": 160, "fully_loaded_hourly_rate": 65, "subscription_per_month": 499, "setup_cost": 1500}
+}

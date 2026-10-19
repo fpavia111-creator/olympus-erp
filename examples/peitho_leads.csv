@@ -1,0 +1,5 @@
+company,contact,email,source_url,source_note,erp_project_announced,erp_role_hiring,implementation_partner,warm_introduction,reviewed,do_not_contact
+Example Implementation Partner,Alex,,https://example.org,FAKE SAMPLE - replace with verified evidence,no,no,yes,no,yes,no
+Example Manufacturing Group,Taylor,,https://example.org,FAKE SAMPLE - replace with verified evidence,yes,no,no,no,yes,no
+Example Unreviewed Company,Casey,,https://example.org,Unverified lead,no,yes,no,no,no,no
+Example Suppressed Company,Morgan,,https://example.org,Do not contact,yes,no,no,no,yes,yes
