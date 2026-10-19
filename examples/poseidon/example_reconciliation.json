@@ -1,0 +1,55 @@
+{
+  "agent": "Poseidon",
+  "status": "NOT RECONCILED",
+  "reconciliation_scope": "Selected key, amount and record count only; not a complete ledger reconciliation",
+  "source": "source_balances.csv",
+  "target": "trial_balances.csv",
+  "source_rows": 4,
+  "target_rows": 4,
+  "matched_keys": 2,
+  "different_keys": 3,
+  "source_total": "1720.00",
+  "target_total": "1705.00",
+  "net_variance": "-15.00",
+  "missing_keys_lines": {
+    "source": [],
+    "target": []
+  },
+  "invalid_amount_lines": {
+    "source": [],
+    "target": []
+  },
+  "differences": [
+    {
+      "key": "INV-1003",
+      "source_amount": "1250.00",
+      "target_amount": "1200.00",
+      "source_count": 1,
+      "target_count": 1,
+      "variance": "-50.00",
+      "issue": "amount_mismatch"
+    },
+    {
+      "key": "INV-1004",
+      "source_amount": "40.00",
+      "target_amount": null,
+      "source_count": 1,
+      "target_count": 0,
+      "variance": null,
+      "issue": "missing_target"
+    },
+    {
+      "key": "INV-9999",
+      "source_amount": null,
+      "target_amount": "75.00",
+      "source_count": 0,
+      "target_count": 1,
+      "variance": null,
+      "issue": "new_target"
+    }
+  ],
+  "total_differences": 3,
+  "truncated": false,
+  "warnings": [],
+  "note": "Independent business-owner validation remains required. No vendor API was contacted."
+}

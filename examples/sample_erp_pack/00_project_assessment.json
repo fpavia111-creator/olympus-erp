@@ -1,0 +1,14 @@
+{
+  "project": "Acme ERP Transformation Pilot",
+  "missing_discovery_fields": [],
+  "risk_flags": [
+    "Multiple legacy sources increase matching and reconciliation complexity",
+    "Multi-location cutover and process harmonization need review"
+  ],
+  "discovery_questions": [
+    "Which account-specific fields, roles, taxes, and subsidiaries must be supported?",
+    "What are the backup, rollback, and acceptable downtime requirements?",
+    "Which vendor sandbox or test tenant can be used for trial imports?"
+  ],
+  "assessment": "PRELIMINARY: no vendor configuration or production data was inspected"
+}
